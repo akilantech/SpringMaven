@@ -1,5 +1,6 @@
 package blue;
 
+import blue.service.AccountService;
 import blue.service.LibraryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,5 +21,6 @@ public class Runner {
         LibraryService libraryService = classPathXmlApplicationContext.getBean("libraryService", LibraryService.class);
         libraryService.findAllBooks();
 
+        classPathXmlApplicationContext.close();
     }
 }

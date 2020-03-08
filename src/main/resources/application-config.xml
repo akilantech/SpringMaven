@@ -11,6 +11,8 @@
 
     <context:component-scan base-package="blue.service"/>
 
+    <bean class="blue.meta.BeanPostProcessorImpl"/>
+
     <bean id="libraryService" class="blue.service.LibraryService" >
 
     </bean>

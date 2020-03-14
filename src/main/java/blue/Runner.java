@@ -1,5 +1,6 @@
 package blue;
 
+import blue.model.DataSource;
 import blue.service.AccountService;
 import blue.service.LibraryService;
 import org.slf4j.Logger;
@@ -20,6 +21,10 @@ public class Runner {
                 = new ClassPathXmlApplicationContext("application-config.xml");
         LibraryService libraryService = classPathXmlApplicationContext.getBean("libraryService", LibraryService.class);
         libraryService.findAllBooks();
+
+        DataSource bean = classPathXmlApplicationContext.getBean(DataSource.class);
+
+        logger.info("Datasournce.......Class"+bean.getDriverClassName());
 
         classPathXmlApplicationContext.close();
     }

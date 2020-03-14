@@ -1,6 +1,7 @@
 package blue.config;
 
 import blue.dao.AccountDao;
+import blue.meta.BeanFactoryPostProcessorImpl;
 import blue.meta.BeanPostProcessorImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,5 +34,9 @@ public class CommonContext {
         return new BeanPostProcessorImpl();
     }
 
+    @Bean
+    public static BeanFactoryPostProcessorImpl beanFactoryPostProcessor(){
+        return new BeanFactoryPostProcessorImpl();
+    }
 
 }

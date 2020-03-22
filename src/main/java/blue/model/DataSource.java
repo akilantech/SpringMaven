@@ -7,6 +7,13 @@ public class DataSource {
     String username;
     String password;
 
+    public DataSource(String driverClassName, String url, String username, String password) {
+        this.driverClassName = driverClassName;
+        this.url = url;
+        this.username = username;
+        this.password = password;
+    }
+
     public String getDriverClassName() {
         return driverClassName;
     }
@@ -37,5 +44,10 @@ public class DataSource {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString(){
+        return "Url:"+url+" UserName"+username;
     }
 }

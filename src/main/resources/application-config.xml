@@ -19,6 +19,7 @@
 
     <!-- What is a BeanPostProcessor and how is it different to a BeanFactoryPostProcessor?-->
    <!--  PropertyPlaceholderConfigurer example of BeanFactoryPostProcessor -->
+   <!--  It has been replaced with PropertySourcesPlaceholderConfigurer   -->
 
     <bean   class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location">
